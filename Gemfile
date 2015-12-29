@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'puma'
+gem 'tilt'
+gem 'gon-sinatra'
+gem 'sinatra-contrib'
+gem 'sinatra-partial'

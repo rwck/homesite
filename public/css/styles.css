@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  /*border: 1px dotted pink;*/
+}
+html {
+}
+.blur {
+  background-size: cover;
+  -webkit-filter: blur(13px);
+  -moz-filter: blur(13px);
+  -o-filter: blur(13px);
+  -ms-filter: blur(13px);
+  filter: blur(13px);
+}
+h1 {
+  font-size: 1.75rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding-top: 1rem;
+}
+p, li {
+  /*font-size: small;*/
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 120%;
+}
+a {
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 120%;
+}
+a:hover {
+  text-decoration: underline;
+}
+h2 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 0.75rem;
+  padding-bottom: 1rem;
+}
+.everything {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-image: url("/images/bwopera_edit.jpg");
+  background-size: cover;
+}
+
+.main-container {
+  margin: 2rem auto;
+  /*filter: blur(5px);*/
+  max-width: 90%;
+  /*background-color: #fafafa;*/
+  /*box-shadow: 4px 4px 12px 1px rgba(131, 139, 139, 1);*/
+}
+.nav-bar {
+  margin: 0 auto;
+  max-width: 50%;
+  min-height: 20px;
+  /*background-color: #fafafa;*/
+}
+.links {}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0 0.2rem;
+}
+.heading {
+  position: relative;
+  width: 100%;
+  margin: 0.5rem auto;
+}
+.contents-box {
+  background-color: #fafafa;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 4px 4px 12px 1px rgba(131, 139, 139, 1);
+}
+.my-image img {
+  border: 1px solid black;
+  width: 100%;
+  padding: 1rem;
+}
+.map {
+  width: 50%;
+  padding: 1rem;
+}
+.picture {
+  margin: auto;
+  text-align: center;
+  object-fit: cover;
+  padding: 1rem;
+}
+.box {
+  display: none;
+  padding: 1rem;
+}
+
+/*@media only screen and (max-width: 629px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+  }
+}*/
