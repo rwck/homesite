@@ -1,0 +1,82 @@
+<body>
+  <div class="everything">
+
+    <div class="main-container">
+
+      <div class="heading">
+
+        <h1>Portfolio</h1>
+
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <span class="links">
+            <% @links.each do |link| %>
+            <li>
+              <a href=<%= link.downcase%>>
+                <%= link %>
+              </a>
+            </li>
+            <% end %>
+          </span>
+        </ul>
+      </nav>
+
+      <div class="section group">
+
+        <div class="box col span_3_of_12">
+
+          <p>
+            <a href="https://immense-ridge-7014.herokuapp.com" target="_blank">Expat</a>
+            <ul>
+              <li>Rails
+              <li>Backbone.js
+              </li>
+            </ul>
+          </p>
+          <a href="https://polar-ridge-7265.herokuapp.com/" target="_blank">FMEA tool</a>
+          <ul>
+            <li>Rails
+            </li>
+          </ul>
+
+          <p></p>
+
+          <p>
+            <a href="http://rwck.github.io/" target="_blank">Othello in JavaScript</a>
+            <ul>
+              <li>JavaScript</li>
+            </ul>
+
+          </p>
+          <a href="https://shrouded-cliffs-5129.herokuapp.com
+" target="_blank">Arduino Light Sensor</a>
+          <ul>
+            <li>Arduino</li>
+            <li>Sinatra</li>
+            <li>JavaScript</li>
+            <span class="devicons devicons-javascript"></span>
+            <span class="devicons devicons-ruby_on_rails"></span>
+            <span class="devicons devicons-ruby_rough"></span>
+            <span class="devicons devicons-backbone"></span>
+            <span class="devicons devicons-sass"></span>
+            <span class="devicons devicons-html5"></span>
+            <span class="devicons devicons-postgresql"></span>
+            <span class="devicons devicons-linux"></span>
+          </ul>
+        </div>
+
+        <div class="box col span_6_of_12">
+          <p>
+            Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless
+            creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi
+            tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>

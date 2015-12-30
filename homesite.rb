@@ -19,7 +19,13 @@ module HomeSite
       set :reloader, true
     end
 
+    get '/hello' do
+      magic = partial :magic
+      erb :home, :locals => {:show_me_magic => magic}
+    end
+
     get '/' do
+
       @interests = interests
       puts @interests
       @links = %w(Portfolio Bio Contact Blog)
@@ -37,15 +43,15 @@ module HomeSite
     end
 
     get '/bio' do
-      redirect to('/')
+      erb :bio
     end
 
     get '/blog' do
-      redirect to('/')
+      erb :blog
     end
 
     get '/contact' do
-      redirect to('/')
+      erb :contact
     end
 
     get '/portfolio' do
