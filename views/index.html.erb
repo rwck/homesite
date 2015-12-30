@@ -4,41 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/styles.css">
-
-  <link rel="stylesheet" href="css/col.css">
-  <link rel="stylesheet" href="css/12cols.css">
-
-  <link rel="stylesheet" href="css/3cols.css">
 
 
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Merriweather:400,700|Josefin+Sans:400' rel='stylesheet' type='text/css'>
 
-  <title>Donald Wade</title>
+  <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+
+  <!-- <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="responsive-nav.js-master/responsive-nav.css">
+  <script src="responsive-nav.js-master/responsive-nav.js"></script>
+
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/col.css">
+  <link rel="stylesheet" href="css/12cols.css">
+  <link rel="stylesheet" href="css/3cols.css">
+
+  <% if false %>
+    <%= include_gon(:camel_case => true, :namespace => 'serverExports') %>
+
+      <% end %>
+
+        <title>Donald Wade</title>
 </head>
 
 <body>
   <div class="everything">
+    <div class="background-container">
+
+    </div>
+
 
     <div class="main-container">
-
 
       <div class="heading">
 
         <h1>Donald Wade</h1>
 
-
-
       </div>
+
+      <div class="section group">
+        <!-- <div class="blur-background">
+        </div> -->
+      </div>
+
+
+      <!-- <nav class="nav-collapse">
+        <ul>
+          <span class="links">
+            <% @links.each do |link| %>
+              <li>
+                <a href=<%=link.downcase %>>
+                  <%= link %>
+                </a>
+              </li>
+              <% end %>
+          </span>
+        </ul>
+      </nav> -->
 
       <nav class="nav-bar">
         <ul>
           <span class="links">
             <% @links.each do |link| %>
               <li>
-                <a href=<%= link.downcase %>>
+                <a href=<%=link.downcase %>>
                   <%= link %>
                 </a>
               </li>
@@ -47,9 +80,24 @@
         </ul>
       </nav>
 
+
+
+
+
+      <!-- <div class="interests">
+        <% if false %>
+        <% @interests.each do |interest| %>
+        <%= interest %>
+        <% end %>
+        <% end %>
+      </div> -->
+
       <div class="section group">
 
-        <div class="box col span_6_of_12">
+
+
+
+        <div id="box-1" class="box col span_6_of_12 content-box blur-box">
           <p>
             Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas,
             imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered
@@ -66,7 +114,7 @@
 
         </div> -->
 
-        <div class="box col span_6_of_12">
+        <div id="box-2" class="box col span_6_of_12 blur-box content-box">
           <p>
             Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas,
             imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered
@@ -74,7 +122,26 @@
           </p>
 
         </div>
+        <div class="section group">
 
+
+          <div class="box col span_6_of_12">
+            <p>
+              <span class="delete-me">Some of the things that make me, me:</span>
+            </p>
+            <div class="interests">
+            </div>
+          </div>
+
+          <div class="box col span_6_of_12">
+            <div class="footer">
+              <i class="fa fa-github-square fa-3x"></i>
+              <i class="fa fa-linkedin-square fa-3x"></i>
+              <i class="fa fa-twitter-square fa-3x"></i>
+              <i class="fa fa-at fa-3x"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -82,6 +149,18 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="/js/underscore/underscore-min.js"></script>
+<!-- <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script> -->
+
 <script src="/js/backbone/backbone-min.js"></script>
+<script src="/js/main.js"></script>
+<script>
+  var test = setInterval(function() {
+    Interests.playInterests(<%= @interests.to_json %>);
+  }, 500);
+</script>
+<script>
+  var nav = responsiveNav(".nav-collapse");
+</script>
+
 
 </html>

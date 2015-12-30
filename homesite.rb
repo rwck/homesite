@@ -4,6 +4,7 @@ require 'tilt/erb'
 require 'gon-sinatra'
 require 'sinatra/reloader'
 require 'sinatra/partial'
+require_relative 'interests' # this file has a big array in it
 
 module HomeSite
   class SinatraApp < Sinatra::Base
@@ -18,10 +19,9 @@ module HomeSite
       set :reloader, true
     end
 
-    def self
-    end
-
     get '/' do
+      @interests = interests
+      puts @interests
       @links = %w(Portfolio Bio Contact Blog)
       @path_array = []
       @text = Dir['public/images/cottage/*.jpg']
@@ -29,7 +29,7 @@ module HomeSite
         corrected_path = picture_path.sub('public/', '')
         @path_array.push(corrected_path)
       end
-      erb :index, locals: { path_array: @path_array, links: @links }
+      erb :index, locals: { path_array: @path_array, links: @links, interests: @interests }
     end
 
     get '/home' do

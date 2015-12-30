@@ -12,8 +12,19 @@ html {
   -ms-filter: blur(13px);
   filter: blur(13px);
 }
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -29,24 +40,54 @@ a {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 120%;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 h2 {
   text-align: center;
   font-family: 'Merriweather', serif;
   font-size: 0.75rem;
   padding-bottom: 1rem;
 }
+
 .everything {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+}
 
-  background-image: url("/images/bwopera_edit.jpg");
+div {
+  transition: blur 2s;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: url("/images/bwopera_edit.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+
+  /*-webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);*/
+}
+
+.blur-box {
+  /*z-index: 1;*/
+  opacity: 0;
+  transition: opacity 5s;
+  /*-webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);*/
 }
 
 .main-container {
@@ -73,6 +114,15 @@ nav ul li {
   display: inline-block;
   padding: 0 0.2rem;
 }
+
+.footer {
+  text-align: center;
+}
+
+.footer .fa {
+  padding: 0.5rem;
+}
+
 .heading {
   position: relative;
   width: 100%;
