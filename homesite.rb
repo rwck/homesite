@@ -27,7 +27,7 @@ module HomeSite
     get '/' do
 
       @interests = interests
-      puts @interests
+      # puts @interests
       @links = %w(Portfolio Bio Contact Blog)
       @path_array = []
       @text = Dir['public/images/cottage/*.jpg']
