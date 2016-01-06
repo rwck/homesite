@@ -203,7 +203,7 @@ nav ul li {
 }
 
 .contact-click {
-  font-size: 400px;
+  font-size: 150px;
 }
 
 .my-devicon-class {
@@ -214,6 +214,8 @@ nav ul li {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  background-color: white;
   /*width: 400px;
   height: 400px;*/
   border: 1px dotted black;

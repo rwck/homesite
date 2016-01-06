@@ -12,26 +12,31 @@ var Interests = {
     }
     // console.log(this.index);
     // console.log(this.array[this.index]);
-    this.index = (this.index + 1) % this.array.length;
-    // console.log("index is", this.index);
-    $(".interests").html("<p>" + this.array[this.index] + "</p>");
+    if (this.array !== null) {
+      this.index = (this.index + 1) % this.array.length;
+      // console.log("index is", this.index);
+      $(".interests").html("<p>" + this.array[this.index] + "</p>");
+    }
   },
 
   shuffle: function(array) {
-    var currentIndex = array.length,
-      temporaryValue, randomIndex;
+    if (array !== null) {
+      var currentIndex = array.length,
+        temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
 
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
     }
 
     return array;
@@ -84,20 +89,29 @@ function putContactClicker() {
 function expandFooter() {
   // $('.background-container').text("");
   // $('.bio-container').text("");
-  $('.footer').addClass("expanded-footer");
-  $('.my_fontawesome').addClass("contact-click", 0, "linear", function() {
-      $(":not(.footer)").click(function() {
-        reduceFooter();
-      });
+  $('.footer').addClass("expanded-footer", function() {
+    everythingBut();
+  });
+  $('.my_fontawesome').addClass("contact-click");
+};
+
+function everythingOff() {
+  $(".everything:not(.footer)").off();
+}
+
+function everythingBut() {
+  $(".everything:not(.footer)").click(function() {
+    reduceFooter();
   });
 }
 
-  function reduceFooter() {
-    $('.footer').removeClass("expanded-footer");
-    $('.my_fontawesome').removeClass("contact-click");
-  }
+function reduceFooter() {
+  $('.footer').removeClass("expanded-footer");
+  $('.my_fontawesome').removeClass("contact-click");
+  everythingOff();
+}
 
-  $(document).ready(function() {
-    getRid();
-    putContactClicker();
-  });
+$(document).ready(function() {
+  getRid();
+  putContactClicker();
+});
