@@ -53,20 +53,51 @@ function deblur() {
 
 function getRid() {
   setTimeout(function() {
-    $(".delete-me").fadeOut(5000);
-  }, 5000);
+    $(".delete-me").fadeOut(25000);
+  }, 7000);
   setTimeout(function() {
-    $(".interests").fadeOut(5000);
+    $(".interests").fadeOut(25000);
   }, 7000);
 }
 
-$(document).ready(function() {
-  deblur();
-  getRid();
-});
+function contactClick() {
+  $('.footer').click(function() {
+    // event.target.addClass("contact-click");
+    console.log(event.target);
+    console.log(event.relatedTarget);
+    console.log(event.pageX);
+    assert.deepEqual(actual, expected);
+    console.log(event.pageY);
+    console.log(event.which);
+    console.log(event.metaKey);
+    // $(event.target).addClass('contact-class');
+  });
+}
 
-// $(document).ready(function(){
-// 	$('#nav-icon3').click(function(){
-// 		$(this).toggleClass('open');
-// 	});
-// });
+function putContactClicker() {
+  $("#contact").click(function() {
+    event.preventDefault();
+    expandFooter();
+  });
+}
+
+function expandFooter() {
+  // $('.background-container').text("");
+  // $('.bio-container').text("");
+  $('.footer').addClass("expanded-footer");
+  $('.my_fontawesome').addClass("contact-click", 0, "linear", function() {
+      $(":not(.footer)").click(function() {
+        reduceFooter();
+      });
+  });
+}
+
+  function reduceFooter() {
+    $('.footer').removeClass("expanded-footer");
+    $('.my_fontawesome').removeClass("contact-click");
+  }
+
+  $(document).ready(function() {
+    getRid();
+    putContactClicker();
+  });

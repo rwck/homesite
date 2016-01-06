@@ -28,6 +28,9 @@
 <%= yield %>
 
 
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
   <script src="/js/underscore/underscore-min.js"></script>
   <!-- <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script> -->
@@ -39,9 +42,5 @@
       Interests.playInterests(<%= @interests.to_json %>);
     }, 500);
   </script>
-  <script>
-    var nav = responsiveNav(".nav-collapse");
-  </script>
-
 
 </html>

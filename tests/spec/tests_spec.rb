@@ -6,7 +6,7 @@ describe 'My Sinatra application' do
     expect(last_response).to be_ok
     expect(last_response.body).to include('Donald Wade')
 
-    ['Donald Wade', 'Portfolio', 'Bio', 'Contact', 'Blog'].each do |string|
+    ['Donald Wade', 'Portfolio', 'Bio', 'Contact'].each do |string|
       string
       expect(last_response.body).to include(string)
     end

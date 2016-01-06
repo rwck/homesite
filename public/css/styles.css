@@ -35,10 +35,15 @@ p, li {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 120%;
 }
+
 a {
   text-decoration: none;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 120%;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h2 {
@@ -46,6 +51,12 @@ h2 {
   font-family: 'Merriweather', serif;
   font-size: 0.75rem;
   padding-bottom: 1rem;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 0.75rem;
+  /*padding-bottom: 1rem;*/
 }
 
 .everything {
@@ -60,6 +71,34 @@ div {
   transition: blur 2s;
 }
 
+.bio-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: url("/images/bwopera4.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+  opacity: 0.2;
+}
+
+.portfolio-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: url("/images/bwopera2.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+  opacity: 0.3;
+}
+
 .background-container {
   position: absolute;
   top: 0;
@@ -68,40 +107,31 @@ div {
   right: 0;
 
   background: url("/images/bwopera_edit.jpg") no-repeat center;
+  opacity: 0.5;
   background-size: cover;
   background-attachment: fixed;
   z-index: -2;
 
-  /*-webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);*/
+}
+
+.rollover-expat {
+  display: none;
 }
 
 .blur-box {
-  /*z-index: 1;*/
   opacity: 0;
   transition: opacity 5s;
-  /*-webkit-filter: blur(30px);
-  -moz-filter: blur(30px);
-  -o-filter: blur(30px);
-  -ms-filter: blur(30px);
-  filter: blur(30px);*/
 }
 
 .main-container {
   margin: 2rem auto;
-  /*filter: blur(5px);*/
   max-width: 90%;
-  /*background-color: #fafafa;*/
-  /*box-shadow: 4px 4px 12px 1px rgba(131, 139, 139, 1);*/
 }
+
 .nav-bar {
   margin: 0 auto;
   max-width: 50%;
   min-height: 20px;
-  /*background-color: #fafafa;*/
 }
 .links {}
 nav ul {
@@ -121,6 +151,15 @@ nav ul li {
 
 .footer .fa {
   padding: 0.5rem;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer a:hover {
+  color: rgb(235, 235, 235);
+  text-decoration: none;
 }
 
 .heading {
@@ -153,6 +192,32 @@ nav ul li {
 .box {
   display: none;
   padding: 1rem;
+}
+
+.my_fontawesome {
+  font-family: FontAwesome;
+  line-height: 120%;
+  font-size: 50px;
+  margin: 0.5rem;
+  transition: font-size 2s;
+}
+
+.contact-click {
+  font-size: 400px;
+}
+
+.my-devicon-class {
+  font-family: devicons;
+}
+
+.expanded-footer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*width: 400px;
+  height: 400px;*/
+  border: 1px dotted black;
+
 }
 
 /*@media only screen and (max-width: 629px) {
