@@ -32,12 +32,11 @@ def interests
   Ruby\ on\ Rails
   Sinatra
   Reading
-  Buddhism
   Mindfulness
   Sinclair\ ZX81\ with\ 16k\ RAM
   Blue\ Screen\ of\ Death
   Autonomy\ with\ structure
-  If\ you\ bang\ on\ all\ the\ time\ about\ how\ authentic\ you\ are\ I\ will\ question\ that
+  If\ you\ bang\ on\ all\ the\ time\ about\ how\ authentic\ you\ are\ I\ will\ not\ believe\ you
   Self\ improvement
   Fluent,\ slightly\ 19th\ century\ and\ rusty\ French
   Fluent,\ slightly\ 18th\ and\ rusty\ German
@@ -51,5 +50,6 @@ def interests
   Business\ strategy
   Account\ development
   Account\ management
+  When\ the\ student\ is\ ready\ the\ teacher\ will\ appear
   )
 end
