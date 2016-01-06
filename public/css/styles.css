@@ -72,7 +72,7 @@ div {
 }
 
 .bio-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -82,17 +82,17 @@ div {
   background-size: cover;
   background-attachment: fixed;
   z-index: -2;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .portfolio-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 
-  background: url("/images/bwopera2.jpg") no-repeat center;
+  background: url("/images/bwopera_2.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   z-index: -2;
@@ -100,7 +100,7 @@ div {
 }
 
 .background-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -147,6 +147,7 @@ nav ul li {
 
 .footer {
   text-align: center;
+  transition: position ease-in 2s, background-color ease-in 3s;
 }
 
 .footer .fa {
@@ -199,7 +200,7 @@ nav ul li {
   line-height: 120%;
   font-size: 50px;
   margin: 0.5rem;
-  transition: font-size 2s;
+  transition: font-size 4s;
 }
 
 .contact-click {
@@ -216,19 +217,16 @@ nav ul li {
   top: 0;
   width: 100%;
   background-color: white;
-  /*width: 400px;
-  height: 400px;*/
   border: 1px dotted black;
-
+  transition: position ease-in 0s, background-color ease-in 2s;
 }
 
-/*@media only screen and (max-width: 629px) {
-  h1 {
-    font-size: 1.25rem;
-  }
-}
+
 @media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 1rem;
+  .contact-click {
+    font-size: 3rem;
   }
-}*/
+  .expanded-footer {
+    position: fixed;
+  }
+}
