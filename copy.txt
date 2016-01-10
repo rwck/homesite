@@ -1,9 +1,0 @@
-Arduino Light Sensor
-
-I still can't get over the fact that you can start with a really simple signal and do a whole bunch of things based on what that signal says.
-
-This project uses an Arduino to get a value from a light sensor. The arduino sends that value to a simple server running on a laptop. Using websockets and a publish / subscribe approach, the server sends the signal to a sinatra web app hosted on heroku.
-
-The upshot is that the website shows (in realtime) the value on the light sensor.
-
-Cool. Or at least, I think so. This is just a tiny insight into what is possible, and I'm actively developing additional functionality.
