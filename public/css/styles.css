@@ -39,6 +39,7 @@ p, li {
 a {
   text-decoration: none;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
   line-height: 120%;
   color: inherit;
 }
@@ -59,7 +60,7 @@ h2 {
 
 h3 {
   font-family: 'Merriweather', serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   /*padding-bottom: 1rem;*/
 }
 
