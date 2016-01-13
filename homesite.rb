@@ -13,7 +13,7 @@ module HomeSite
     Tilt.register Tilt::ERBTemplate, 'html.erb'
 
     configure do
-      set :environment, :development
+      set :environment, :production
       set :partial_template_engine, :erb
       set :partial_underscores, true
       set :reloader, true

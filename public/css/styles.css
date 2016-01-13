@@ -153,6 +153,7 @@ nav ul li {
 .footer {
   text-align: center;
   transition: position ease-in 2s, background-color ease-in 3s;
+  -webkit-transition: position ease-in 2s, background-color ease-in 3s;
 }
 
 .footer .fa {
@@ -224,6 +225,7 @@ nav ul li {
   background-color: white;
   border: 1px dotted black;
   transition: position ease-in 0s, background-color ease-in 2s;
+  -webkit-transition: position ease-in 0s, background-color ease-in 2s;
 }
 
 
