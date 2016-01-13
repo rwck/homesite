@@ -37,6 +37,7 @@ module HomeSite
 
     get '/contact' do
       erb :contact
+      @links = %w(Home Portfolio Bio)
     end
 
     get '/portfolio' do
