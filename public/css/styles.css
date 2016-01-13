@@ -215,12 +215,12 @@ nav ul li {
   line-height: 120%;
   font-size: 2rem;
   margin: 0.5rem;
-  transition: font-size 4s;
-  -moz-transition: font-size 4s;
+  transition: font-size 2s;
+  -moz-transition: font-size 2s;
 }
 
 .contact-click {
-  font-size: 150px;
+  font-size: 4rem;
 }
 
 .my-devicon-class {
@@ -233,10 +233,10 @@ nav ul li {
   top: 0;
   width: 100%;
   background-color: white;
-  border: 1px dotted black;
-  transition: position ease-in 0s, background-color ease-in 2s;
-  -webkit-transition: position ease-in 0s, background-color ease-in 2s;
-  -moz-transition: position ease-in 0s, background-color ease-in 2s;
+  /*border: 1px dotted black;*/
+  transition: position ease-in 0s, background-color ease-in 0s;
+  -webkit-transition: position ease-in 0s, background-color ease-in 0s;
+  -moz-transition: position ease-in 0s, background-color ease-in 0s;
 }
 
 
