@@ -80,7 +80,7 @@ function contactClick() {
 }
 
 function putContactClicker() {
-  $("#contact").click(function() {
+  $("#contact").click(function(event) {
     event.preventDefault();
     expandFooter();
   });
