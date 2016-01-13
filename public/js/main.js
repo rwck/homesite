@@ -66,7 +66,7 @@ function getRid() {
 }
 
 function contactClick() {
-  $('.footer').click(function() {
+  $('.footer').click(function(event) {
     // event.target.addClass("contact-click");
     console.log(event.target);
     console.log(event.relatedTarget);
@@ -80,7 +80,7 @@ function contactClick() {
 }
 
 function putContactClicker() {
-  $("#contact").click(function() {
+  $("#contact").click(function(event) {
     event.preventDefault();
     expandFooter();
   });
