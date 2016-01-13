@@ -36,6 +36,12 @@ p, li {
   line-height: 120%;
 }
 
+hr {
+  height: 1px;
+  background-color: black;
+  border: none;
+}
+
 a {
   text-decoration: none;
   font-family: 'Josefin Sans', sans-serif;
